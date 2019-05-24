@@ -25,10 +25,6 @@ sort_ranges <- function(l) {
   l[order(ll)]
 }
 
-iter_pairs <- function(l) {
-  mapply(list, head(l, -1), tail(l, -1), SIMPLIFY = F)
-}
-
 check_range_overlap <- function(l) {
   r <- sort_ranges(Filter(is.spec_range, l))
   if (length(r) > 1) {

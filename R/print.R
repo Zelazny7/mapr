@@ -1,4 +1,4 @@
-
+#' @export
 print.spec <- function(x, ...) cat(toString(x), sep = "")
 
 toString.spec_clamp <- function(x, collapse = ", "){
@@ -18,5 +18,5 @@ toString.spec_exception <- function(x, collapse = ", ") {
 }
 
 toString.spec_list <- function(x, collapse = "\n") {
-  do.call(paste, c(lapply(x, toString), sep="\n"))
+  do.call(paste, c(lapply(x$specs, toString), sep="\n"))
 }

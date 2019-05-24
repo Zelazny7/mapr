@@ -1,4 +1,4 @@
-
+library(mapr)
 l <- spec_list(
   spec_clamp(-5, 9),
   spec_exception(-1, 3),
@@ -7,4 +7,4 @@ l <- spec_list(
   spec_missing(2)
   )
 
-predict.spec_list(l, -10:1)
+predict(l, -10:1)
